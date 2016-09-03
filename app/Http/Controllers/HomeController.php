@@ -25,7 +25,7 @@ class HomeController extends Controller
     public function index()
     {
         $a = Article::where('id','>',1)->get();
-        //hello world
+        //hello worldabc
         return view('home', compact('a'));
     }
 
