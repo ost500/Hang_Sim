@@ -12,9 +12,7 @@ class ArticlesSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('articles')->insert([
-            'content' => str_random(10),
-            'user_id' => '1',
+        factory(App\Article::class, 4)->create([
         ]);
     }
 }

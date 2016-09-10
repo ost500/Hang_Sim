@@ -60,7 +60,7 @@
     <div class="row">
         @foreach($article_all as $arti)
             <div class="col-lg-4">
-                <h2>Safari bug warning!</h2>
+                <h2>{{ $arti->title }}</h2>
                 <p>{{ $arti->content }}</p>
                 <h3>{{ $arti->user->name }}</h3>
                 <p><a class="btn btn-primary" href="#" role="button">View details »</a></p>
