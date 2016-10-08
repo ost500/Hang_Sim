@@ -16,5 +16,7 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/event_list', 'HomeController@event_list');
+
 Route::post('/abcd','HomeController@abcd');
 
