@@ -15,7 +15,8 @@ class CreateArticlesTable extends Migration
     {
         Schema::create('articles', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('content');
+            $table->text('title');
+            $table->text('content');
             $table->integer('user_id')->unsigned()->index();
             $table->foreign('user_id')
                 ->references('id')->on('users')
