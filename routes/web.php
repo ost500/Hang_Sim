@@ -16,5 +16,10 @@ Auth::routes();
 
 Route::get('/', 'HomeController@index');
 
+Route::get('/event_list', 'HomeController@event_list');
+
+Route::get('/event_single/{articleId}', 'HomeController@event_single');
+
+
 Route::post('/abcd','HomeController@abcd');
 
