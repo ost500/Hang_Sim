@@ -37,6 +37,13 @@ class HomeController extends Controller
         return view('event-list', compact('article_all'));
     }
 
+    public function event_single($articleId)
+    {
+        $article_single = Article::find($articleId);
+
+        return view('event-single', compact('article_single'));
+    }
+
     public function abcd(Request $request)
     {
         echo $request->fname;
