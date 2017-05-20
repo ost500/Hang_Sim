@@ -23,3 +23,7 @@ Route::get('/event_single/{articleId}', 'HomeController@event_single');
 
 Route::post('/abcd','HomeController@abcd');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

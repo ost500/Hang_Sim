@@ -143,38 +143,38 @@
                     <div id="list-view" class="tab-pane fade active in" role="tabpanel">
                         <div class="thumbnails events vertical">
 
-                            @foreach($article_all as $article)
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-3 col-sm-3 col-xs-4">
-                                            <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart"></i></a>
-                                                <img src="../../public/assets/img/preview/event-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-9 col-sm-9 col-xs-8">
-                                            <div class="caption">
-                                                <a href="#" class="pull-right">
-                                                            <span class="fa-stack fa-lg">
-                                                                <i class="fa fa-stack-2x fa-circle-thin"></i>
-                                                                <i class="fa fa-stack-1x fa-share-alt"></i>
-                                                            </span>
-                                                </a>
-                                                <h3 class="caption-title"><a href="#">{{ $article->title }}</a></h3>
-                                                <p class="caption-category"><i
-                                                            class="fa fa-file-text-o"></i> {{ $article->created_at }} on
-                                                    Manhattan / New York</p>
-                                                <p class="caption-price">Tickets from $49,99</p>
-                                                <p class="caption-text">{{ $article->content }}</p>
-                                                <p class="caption-more"><a href="#" class="btn btn-theme">자세히</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <hr class="page-divider half"/>
-                            @endforeach
+                            {{--@foreach($article_all as $article)--}}
+                                {{--<div class="thumbnail no-border no-padding">--}}
+                                    {{--<div class="row">--}}
+                                        {{--<div class="col-md-3 col-sm-3 col-xs-4">--}}
+                                            {{--<div class="media">--}}
+                                                {{--<a href="#" class="like"><i class="fa fa-heart"></i></a>--}}
+                                                {{--<img src="../../public/assets/img/preview/event-1.jpg" alt="">--}}
+                                                {{--<div class="caption hovered"></div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                        {{--<div class="col-md-9 col-sm-9 col-xs-8">--}}
+                                            {{--<div class="caption">--}}
+                                                {{--<a href="#" class="pull-right">--}}
+                                                            {{--<span class="fa-stack fa-lg">--}}
+                                                                {{--<i class="fa fa-stack-2x fa-circle-thin"></i>--}}
+                                                                {{--<i class="fa fa-stack-1x fa-share-alt"></i>--}}
+                                                            {{--</span>--}}
+                                                {{--</a>--}}
+                                                {{--<h3 class="caption-title"><a href="#">{{ $article->title }}</a></h3>--}}
+                                                {{--<p class="caption-category"><i--}}
+                                                            {{--class="fa fa-file-text-o"></i> {{ $article->created_at }} on--}}
+                                                    {{--Manhattan / New York</p>--}}
+                                                {{--<p class="caption-price">Tickets from $49,99</p>--}}
+                                                {{--<p class="caption-text">{{ $article->content }}</p>--}}
+                                                {{--<p class="caption-more"><a href="#" class="btn btn-theme">자세히</a>--}}
+                                                {{--</p>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                                {{--<hr class="page-divider half"/>--}}
+                            {{--@endforeach--}}
 
 
                         </div>
