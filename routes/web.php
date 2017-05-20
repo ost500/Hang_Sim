@@ -12,6 +12,8 @@
 */
 
 
+use Illuminate\Support\Facades\Route;
+
 Auth::routes();
 
 Route::get('/', 'HomeController@index');
@@ -27,3 +29,6 @@ Route::post('/abcd','HomeController@abcd');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::get('/article_list', 'ArticleController@show');
