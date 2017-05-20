@@ -167,7 +167,8 @@
                                                     </a>
                                                     <h3 class="caption-title"><a href="#">{{ $article->title }}</a></h3>
                                                     <p class="caption-category"><i
-                                                                class="fa fa-file-text-o"></i> {{ $article->created_at }} on
+                                                                class="fa fa-file-text-o"></i> {{ $article->created_at }}
+                                                        on
                                                         Manhattan / New York</p>
                                                     <p class="caption-price">Tickets from $49,99</p>
                                                     <p class="caption-text">{{ $article->contents }}</p>
@@ -187,41 +188,44 @@
                             <!-- Pagination -->
                             <div class="pagination-wrapper">
                                 <ul class="pagination">
-                                    {{--@if($article_all->currentPage() >= 4)--}}
-                                    {{--<li class="disabled">--}}
-                                    {{--<li>--}}
-                                    {{--<a href="{{url('event_list'."?page=".($article_all->currentPage()-3))}}--}}
-                                    {{--"><i--}}
-                                    {{--class="fa fa-chevron-left"></i></a></li>--}}
+
+                                                                        {{ $articleList->links() }}
+                                    {{--@if($articleList->currentPage() >= 4)--}}
+                                        {{--<li class="disabled">--}}
+                                        {{--<li>--}}
+                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()-3))}}--}}
+                                                    {{--"><i--}}
+                                                        {{--class="fa fa-chevron-left"></i></a></li>--}}
                                     {{--@endif--}}
-                                    {{--@if($article_all->currentPage() >= 3)--}}
-                                    {{--<li><a--}}
-                                    {{--href="{{url('event_list'."?page=".($article_all->currentPage()-2))}}">{{$article_all->currentPage()-2}}--}}
-                                    {{--<span class="sr-only">(current)</span></a></li>--}}
+                                    {{--@if($articleList->currentPage() >= 3)--}}
+                                        {{--<li>--}}
+                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()-2))}}">{{$articleList->currentPage()-2}}--}}
+                                                {{--<span class="sr-only">(current)</span></a></li>--}}
                                     {{--@endif--}}
-                                    {{--@if($article_all->currentPage() >= 2)--}}
-                                    {{--<li>--}}
-                                    {{--<a href="{{url('event_list'."?page=".($article_all->currentPage()-1))}}">{{$article_all->currentPage()-1}}--}}
-                                    {{--<span class="sr-only">(current)</span></a></li>--}}
+                                    {{--@if($articleList->currentPage() >= 2)--}}
+                                        {{--<li>--}}
+                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()-1))}}">{{$articleList->currentPage()-1}}--}}
+                                                {{--<span class="sr-only">(current)</span></a></li>--}}
 
                                     {{--@endif--}}
                                     {{--<li>--}}
-                                    {{--<li class="active"><a href=#>{{$article_all->currentPage()}}</a></li>--}}
-                                    {{--@if($article_all->lastPage()-1 >= $article_all->currentPage())--}}
-                                    {{--<li>--}}
-                                    {{--<a href="{{url('event_list'."?page=".($article_all->currentPage()+1))}}">{{$article_all->currentPage()+1}}</a>--}}
-                                    {{--</li>--}}
+                                    {{--<li class="active"><a href=#>{{$articleList->currentPage()}}</a></li>--}}
+                                    {{--@if($articleList->lastPage()-1 >= $articleList->currentPage())--}}
+                                        {{--<li>--}}
+                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()+1))}}">{{$articleList->currentPage()+1}}</a>--}}
+                                        {{--</li>--}}
                                     {{--@endif--}}
-                                    {{--@if($article_all->lastPage()-2 >= $article_all->currentPage())--}}
-                                    {{--<li>--}}
-                                    {{--<a href="{{url('event_list'."?page=".($article_all->currentPage()+2))}}">{{$article_all->currentPage()+2}}</a>--}}
-                                    {{--</li>--}}
+                                    {{--@if($articleList->lastPage()-2 >= $articleList->currentPage())--}}
+                                        {{--<li>--}}
+                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()+2))}}">{{$articleList->currentPage()+2}}</a>--}}
+                                        {{--</li>--}}
                                     {{--@endif--}}
 
-                                    {{--@if($article_all->lastPage()-3 >= $article_all->currentPage())--}}
-                                    {{--<li>--}}
-                                    {{--<a href="{{url('event_list'."?page=".($article_all->currentPage()+3))}}"><i class="fa fa-chevron-right"></i></a>--}}
-                                    {{--</li>--}}
+                                    {{--@if($articleList->lastPage()-3 >= $articleList->currentPage())--}}
+                                        {{--<li>--}}
+                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()+3))}}"><i--}}
+                                                        {{--class="fa fa-chevron-right"></i></a>--}}
+                                        {{--</li>--}}
                                     {{--@endif--}}
                                 </ul>
                             </div>
