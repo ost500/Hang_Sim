@@ -13,7 +13,11 @@ class ArticleController extends Controller
     public function show()
     {
 
-        $articleList = DB::table('article_lists')->paginate(5);
+//        $articleList = DB::table('article_lists')->with('hashtags')->paginate(5);
+
+        $articleList = ArticleList::with('hashtags')->get();
+//        $articleList = ArticleList::where('user_id', 1)->get();
+
 
 //        return response()->json($articleList);
         return view('event-list', compact('articleList'));

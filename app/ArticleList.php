@@ -10,4 +10,10 @@ class ArticleList extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    public function hashtags()
+    {
+        return $this->belongsToMany(Hashtag::class, 'article_list_hashtags');
+    }
+
 }

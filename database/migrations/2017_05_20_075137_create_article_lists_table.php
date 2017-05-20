@@ -7,7 +7,7 @@ use Illuminate\Database\Migrations\Migration;
 class CreateArticleListsTable extends Migration
 {
     /**
-     * Run the migrations.
+     * Run the migrations.article_lists
      *
      * @return void
      */

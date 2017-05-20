@@ -31,3 +31,20 @@ $factory->define(App\ArticleList::class, function (Faker\Generator $faker) {
         'user_id' => $faker->randomElement($userIds),
     ];
 });
+$factory->define(App\Hashtag::class, function (Faker\Generator $faker) {
+
+    return [
+        'hashtag' => '#'.$faker->name
+    ];
+});
+$factory->define(App\ArticleListHashtag::class, function (Faker\Generator $faker) {
+
+    $articlelistIds = App\ArticleList::pluck('id')->toArray();
+    $hashtagIds = App\Hashtag::pluck('id')->toArray();
+
+    return [
+        'article_list_id'=> $faker->randomElement($articlelistIds),
+        'hashtag_id'=> $faker->randomElement($hashtagIds),
+
+    ];
+});

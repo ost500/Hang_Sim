@@ -170,7 +170,9 @@
                                                                 class="fa fa-file-text-o"></i> {{ $article->created_at }}
                                                         on
                                                         Manhattan / New York</p>
-                                                    <p class="caption-price">Tickets from $49,99</p>
+                                                    @foreach($article->hashtags as $hashtag)
+                                                        <p class="caption-price">{{ $hashtag->hashtag }}</p>
+                                                    @endforeach
                                                     <p class="caption-text">{{ $article->contents }}</p>
                                                     <p class="caption-more"><a href="#" class="btn btn-theme">자세히</a>
                                                     </p>
@@ -189,43 +191,43 @@
                             <div class="pagination-wrapper">
                                 <ul class="pagination">
 
-                                                                        {{ $articleList->links() }}
+                                    {{--                                                                        {{ $articleList->links() }}--}}
                                     {{--@if($articleList->currentPage() >= 4)--}}
-                                        {{--<li class="disabled">--}}
-                                        {{--<li>--}}
-                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()-3))}}--}}
-                                                    {{--"><i--}}
-                                                        {{--class="fa fa-chevron-left"></i></a></li>--}}
+                                    {{--<li class="disabled">--}}
+                                    {{--<li>--}}
+                                    {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()-3))}}--}}
+                                    {{--"><i--}}
+                                    {{--class="fa fa-chevron-left"></i></a></li>--}}
                                     {{--@endif--}}
                                     {{--@if($articleList->currentPage() >= 3)--}}
-                                        {{--<li>--}}
-                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()-2))}}">{{$articleList->currentPage()-2}}--}}
-                                                {{--<span class="sr-only">(current)</span></a></li>--}}
+                                    {{--<li>--}}
+                                    {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()-2))}}">{{$articleList->currentPage()-2}}--}}
+                                    {{--<span class="sr-only">(current)</span></a></li>--}}
                                     {{--@endif--}}
                                     {{--@if($articleList->currentPage() >= 2)--}}
-                                        {{--<li>--}}
-                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()-1))}}">{{$articleList->currentPage()-1}}--}}
-                                                {{--<span class="sr-only">(current)</span></a></li>--}}
+                                    {{--<li>--}}
+                                    {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()-1))}}">{{$articleList->currentPage()-1}}--}}
+                                    {{--<span class="sr-only">(current)</span></a></li>--}}
 
                                     {{--@endif--}}
                                     {{--<li>--}}
                                     {{--<li class="active"><a href=#>{{$articleList->currentPage()}}</a></li>--}}
                                     {{--@if($articleList->lastPage()-1 >= $articleList->currentPage())--}}
-                                        {{--<li>--}}
-                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()+1))}}">{{$articleList->currentPage()+1}}</a>--}}
-                                        {{--</li>--}}
+                                    {{--<li>--}}
+                                    {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()+1))}}">{{$articleList->currentPage()+1}}</a>--}}
+                                    {{--</li>--}}
                                     {{--@endif--}}
                                     {{--@if($articleList->lastPage()-2 >= $articleList->currentPage())--}}
-                                        {{--<li>--}}
-                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()+2))}}">{{$articleList->currentPage()+2}}</a>--}}
-                                        {{--</li>--}}
+                                    {{--<li>--}}
+                                    {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()+2))}}">{{$articleList->currentPage()+2}}</a>--}}
+                                    {{--</li>--}}
                                     {{--@endif--}}
 
                                     {{--@if($articleList->lastPage()-3 >= $articleList->currentPage())--}}
-                                        {{--<li>--}}
-                                            {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()+3))}}"><i--}}
-                                                        {{--class="fa fa-chevron-right"></i></a>--}}
-                                        {{--</li>--}}
+                                    {{--<li>--}}
+                                    {{--<a href="{{url('event_list'."?page=".($articleList->currentPage()+3))}}"><i--}}
+                                    {{--class="fa fa-chevron-right"></i></a>--}}
+                                    {{--</li>--}}
                                     {{--@endif--}}
                                 </ul>
                             </div>
